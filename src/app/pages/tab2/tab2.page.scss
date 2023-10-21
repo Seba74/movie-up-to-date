@@ -1,0 +1,23 @@
+ion-header {
+  --box-shadow: none !important;
+}
+
+ion-searchbar {
+  --box-shadow: none !important;
+  --border-radius: 10px !important;
+}
+
+.spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-card {
+  height: 250px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

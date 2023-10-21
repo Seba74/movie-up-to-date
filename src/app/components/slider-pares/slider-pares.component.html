@@ -1,0 +1,25 @@
+<swiper-container *ngIf="loaded" class="mySwiper" slides-per-view="3.1" free-mode="true" space-between="10">
+  <swiper-slide *ngFor="let pares of movies | pares">
+    <ion-row>
+      <ion-col size="12" *ngFor="let movie of pares">
+        <img [src]="movie.poster_path | image" (click)="showDetails(movie.id)"/>
+      </ion-col>
+    </ion-row>
+  </swiper-slide>
+  <swiper-slide class="slide-button">
+    <ion-button (click)="loadMoreMovies()" fill="clear" color="main" shape="round">
+      <ion-icon slot="icon-only" name="add" color="main"></ion-icon>
+    </ion-button>
+  </swiper-slide>
+</swiper-container>
+
+
+<swiper-container *ngIf="!loaded" class="mySwiper" slides-per-view="3.1" free-mode="true" space-between="10">
+  <swiper-slide *ngFor="let pares of movies | pares">
+    <ion-row>
+      <ion-col size="12" *ngFor="let movie of pares">
+        <ion-skeleton-text [animated]="true" style="width: 100%; height: 100%"></ion-skeleton-text>
+      </ion-col>
+    </ion-row>
+  </swiper-slide>
+</swiper-container>

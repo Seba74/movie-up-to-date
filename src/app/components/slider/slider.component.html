@@ -1,0 +1,12 @@
+<swiper-container *ngIf="loaded" class="mySwiper" slides-per-view="1.3" free-mode="true" space-between="20">
+  <swiper-slide *ngFor="let movie of movies" (click)="showDetails(movie.id)">
+    <img [src]="movie.backdrop_path | image" />
+  </swiper-slide>
+</swiper-container>
+
+
+<swiper-container *ngIf="!loaded" class="mySwiper" slides-per-view="1.3" free-mode="true" space-between="20">
+  <swiper-slide *ngFor="let movie of movies">
+    <ion-skeleton-text [animated]="true" style="width: 100%; height: 100%"></ion-skeleton-text>
+  </swiper-slide>
+</swiper-container>

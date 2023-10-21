@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col class="title-container ">
+        <h2>Películas Favoritas</h2>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <div *ngFor="let movieForGenre of filterMovies">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="6">
+          <h3> {{movieForGenre.genre}} </h3>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <app-slider-poster [movies]="movieForGenre.movies" [loaded]="loaded"></app-slider-poster>
+  </div>
+</ion-content>

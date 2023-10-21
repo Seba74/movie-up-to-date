@@ -1,0 +1,134 @@
+@import "../../../styles/variables.scss";
+
+.poster-about-detaills {
+  position: relative;
+  top: -75px;
+  left: -10px;
+  margin-bottom: -75px;
+}
+
+.title {
+  width: 100%;
+  position: absolute;
+  padding: 5px 5px 40px 5px;
+  height: 12%;
+
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+3,000000+16,000000+66&0.8+53,0+99 */
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.8) 3%,
+    rgba(0, 0, 0, 0.8) 16%,
+    rgba(0, 0, 0, 0.8) 53%,
+    rgba(0, 0, 0, 0.57) 66%,
+    rgba(0, 0, 0, 0) 99%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.8) 3%,
+    rgba(0, 0, 0, 0.8) 16%,
+    rgba(0, 0, 0, 0.8) 53%,
+    rgba(0, 0, 0, 0.57) 66%,
+    rgba(0, 0, 0, 0) 99%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8) 3%,
+    rgba(0, 0, 0, 0.8) 16%,
+    rgba(0, 0, 0, 0.8) 53%,
+    rgba(0, 0, 0, 0.57) 66%,
+    rgba(0, 0, 0, 0) 99%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.title h1 {
+  position: absolute;
+  top: 18px;
+  left: 10px;
+}
+
+.card-actor {
+  height: 210px;
+}
+
+.actor-name {
+  position: absolute;
+  bottom: -2px;
+  z-index: 10;
+  padding: 0 0 5px 5px;
+  width: 100%;
+
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+18,000000+37,000000+65,000000+77&0+3,0.8+69,0.8+93,0.8+93 */
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 3%,
+    rgba(0, 0, 0, 0.18) 18%,
+    rgba(0, 0, 0, 0.41) 37%,
+    rgba(0, 0, 0, 0.75) 65%,
+    rgba(0, 0, 0, 0.8) 69%,
+    rgba(0, 0, 0, 0.8) 77%,
+    rgba(0, 0, 0, 0.8) 93%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 3%,
+    rgba(0, 0, 0, 0.18) 18%,
+    rgba(0, 0, 0, 0.41) 37%,
+    rgba(0, 0, 0, 0.75) 65%,
+    rgba(0, 0, 0, 0.8) 69%,
+    rgba(0, 0, 0, 0.8) 77%,
+    rgba(0, 0, 0, 0.8) 93%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 3%,
+    rgba(0, 0, 0, 0.18) 18%,
+    rgba(0, 0, 0, 0.41) 37%,
+    rgba(0, 0, 0, 0.75) 65%,
+    rgba(0, 0, 0, 0.8) 69%,
+    rgba(0, 0, 0, 0.8) 77%,
+    rgba(0, 0, 0, 0.8) 93%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 ); /* IE6-9 */
+
+  h3 {
+    width: 100%;
+    font-size: 1.2rem !important;
+  }
+}
+
+.poster {
+  box-shadow: $shadow-2;
+}
+
+.actors-title {
+  padding-left: 8px;
+}
+
+.movie-overview {
+  line-height: 1.6;
+  font-size: 1.8rem;
+}
+
+swiper-container {
+  width: 100%;
+  height: max-content;
+  padding: 16px;
+}
+
+swiper-slide {
+  position: relative;
+  height: 160px;
+  box-shadow: $shadow-2;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+ion-buttons{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}

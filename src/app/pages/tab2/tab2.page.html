@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true">
+  <ion-header class="header">
+    <ion-toolbar color="main">
+      <ion-title>
+        Buscar Película
+      </ion-title>
+    </ion-toolbar>
+    <ion-searchbar placeholder="Buscar Película..." (ionClear)="clearSearchInput()" animated debounce="700"
+      [value]="searchInput" (ionInput)="searchMovieByInput($event)"></ion-searchbar>
+  </ion-header>
+
+  <ion-grid *ngIf="searching">
+    <ion-row>
+      <ion-col class="spinner-container">
+        <ion-spinner name="crescent" color="main"></ion-spinner>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list *ngIf="this.movies.length === 0 && !searching">
+    <ion-list-header>
+      <ion-label color="main">
+        <h2>Top Busquedas</h2>
+      </ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let title of topSearches" (click)="searchMovieByList(title)">
+      <ion-label>
+        <p>{{title}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6" *ngFor="let movie of movies">
+        <ion-card>
+          <img [src]="movie.poster_path | image" (click)="showDetails(movie.id)" />
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
